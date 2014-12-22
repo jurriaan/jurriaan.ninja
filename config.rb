@@ -41,12 +41,15 @@
  end
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-#
-# end
+helpers do
+  def title
+    if current_page.data.title
+      current_page.data.title + " - Jurriaan's Blog"
+    else
+      "Jurriaan's Blog"
+    end
+  end
+end
 #
 activate :blog do |blog|
   blog.layout = :blog_layout
