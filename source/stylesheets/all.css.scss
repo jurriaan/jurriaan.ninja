@@ -27,7 +27,7 @@ $link-color: $blue;
 $hover-color: $orange;
 
 body {
-  font-family: 'Source Code Pro', serif;
+  font-family: 'Source Sans Pro', $helvetica;
   font-weight: 400;
   background: $background;
   color: $text-color;
@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5 {
 }
 
 code {
+  font-family: 'Source Code Pro', serif;
   background-color: $base02;
 }
 $gutter: golden-ratio(1em, 1) !global;
