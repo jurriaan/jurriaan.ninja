@@ -1,0 +1,17 @@
+== wrap_layout :layout do
+  article.blog role="article" itemscope="" itemtype="http://schema.org/BlogPosting"
+    header
+      h1 = current_article.title
+      a.author rel="me" itemprop="author" href="//jurriaan.ninja" Jurriaan Pruis
+      time itemprop="dateCreated" datetime=current_article.date = current_article.date.to_date
+
+    == yield
+
+    aside#disqus_thread
+    script type="text/javascript"
+      | var disqus_shortname = 'jurriaan';
+      | (function() {
+      |   var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      |   dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      |   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      | })();

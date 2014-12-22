@@ -1,0 +1,13 @@
+---
+title: Jurriaan Pruis
+pageable: true
+per_page: 10
+---
+- page_articles.each_with_index do |article, i|
+  article.blog role="article" itemscope="" itemtype="http://schema.org/BlogPosting"
+    header
+      h1 = link_to article.title, article
+      a.author rel="me" itemprop="author" href="//jurriaan.ninja" Jurriaan Pruis
+      time itemprop="dateCreated" datetime=article.date = article.date.to_date
+
+    == article.body
