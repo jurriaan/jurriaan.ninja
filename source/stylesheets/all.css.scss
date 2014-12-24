@@ -25,6 +25,9 @@ $text-color: $base0;
 $header-color: $base2;
 $link-color: $blue;
 $hover-color: $orange;
+// Media Queries Breakpoints
+$tablet-size:em(700);
+$tablet: new-breakpoint(min-width $tablet-size 12);
 
 body {
   font-family: 'Source Sans Pro', $helvetica;
@@ -46,13 +49,18 @@ h1, h2, h3, h4, h5 {
   color: $header-color;
 }
 
+h2, h3, h4, h5 {
+  margin: 0.5rem 0;
+  margin-bottom: 0.2rem;
+}
+
 code {
   font-family: 'Source Code Pro', serif;
   background-color: $base02;
 }
 $gutter: golden-ratio(1em, 1) !global;
 
-main {
+.container {
   &>header {
     margin: 1rem 0;
     h1 {
@@ -63,13 +71,20 @@ main {
       }
     }
   }
-  @include outer-container;
   padding: 0 $gutter;
   .left {
-    @include span-columns(3);
     padding-right:0;
   }
-  &>article {
+}
+
+@include media($tablet) {
+  .container {
+    @include outer-container;
+  }
+  .container .left {
+    @include span-columns(3);
+  }
+  main {
     @include span-columns(9);
   }
 }
@@ -100,16 +115,23 @@ article.blog header {
 }
 
 article.blog {
-  pre {
+ .highlight table {
     background: $base02;
-    padding:1rem;
+  }
+  .highlight {
+    max-width:100%;
+    background: $base02;
+    overflow:auto;
+    font-size:0.8rem;
+  }
+  pre {
+    padding:0 1rem;
   }
 }
 
 footer {
   @include outer-container;
   p {
-    @include span-columns(12);
     text-align: center;
     text-transform: uppercase;
     font-size:0.7rem;

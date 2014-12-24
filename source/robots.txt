@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Sitemap: http://jurriaan.ninja/sitemap.xml
+Sitemap: http://jurriaan.ninja/feed.xml

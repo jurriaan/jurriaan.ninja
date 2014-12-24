@@ -1,6 +1,8 @@
 ---
 pageable: true
 per_page: 10
+priority: 1
+changefreq: 'daily'
 ---
 - page_articles.each_with_index do |article, i|
   article.blog role="article" itemscope="" itemtype="http://schema.org/BlogPosting"
@@ -10,3 +12,6 @@ per_page: 10
       time itemprop="dateCreated" datetime=article.date = article.date.to_date
 
     == article.body
+
+    p = link_to 'Comments', article.url + '#comments'
+
