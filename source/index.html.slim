@@ -9,9 +9,9 @@ changefreq: 'daily'
     header
       h1 = link_to article.title, article
       a.author rel="me" itemprop="author" href="//jurriaan.ninja" Jurriaan Pruis
-      time itemprop="dateCreated" datetime=article.date = article.date.to_date
+      time itemprop="datePublished" datetime=article.date = article.date.to_date
 
     == article.body
 
-    p = link_to 'Comments', article.url + '#comments'
+    p = link_to 'Comments', article.url + '#comments', itemprop: 'discussionUrl'
 
