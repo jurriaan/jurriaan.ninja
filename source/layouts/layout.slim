@@ -35,7 +35,13 @@ html lang="en"
         == yield
   footer
     p 
-      | Created with 
+      | &copy; Copyright 
+      = Time.now.year
+      |  
+      a href="http://creativecommons.org/licenses/by-sa/4.0/" BY-SA
+      |  
+      a.nolink href="http://jurriaan.ninja" rel="me" Jurriaan Pruis
+      | , Created with 
       a href="http://middlemanapp.com" Middleman
       |, source on 
       a href="http://github.com/jurriaan/jurriaan.ninja" GitHub
