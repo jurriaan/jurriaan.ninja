@@ -1,6 +1,6 @@
 ---
 title: Maid as a Daemon on OS X
-date: 2015-01-01 21:00 UTC
+date: 2015-01-01 17:00 UTC
 tags: OS X, Maid, Hazel
 ---
 
