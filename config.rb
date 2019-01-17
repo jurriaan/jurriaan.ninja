@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 ###
 # Compass
 ###
@@ -33,12 +35,12 @@
 ###
 
 # Automatic image dimensions on image_tag helper
- activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
- configure :development do
-   activate :livereload
- end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 helpers do
@@ -66,8 +68,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 set :markdown_engine, :kramdown
-set :markdown, :fenced_code_blocks => true, :smartypants => true
-activate :syntax, line_numbers:  true
+set :markdown, fenced_code_blocks: true, smartypants: true
+activate :syntax, line_numbers: true
 
 # Build-specific configuration
 configure :build do

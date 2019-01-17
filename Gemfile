@@ -1,12 +1,16 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-gem 'middleman', '~>3.3.7'
-gem 'middleman-blog', '~>3.5.3'
-gem 'middleman-livereload', '~> 3.1.0'
+gem 'middleman-blog', '~>4.0'
+gem 'middleman-cli'
+gem 'middleman-livereload'
 gem 'middleman-syntax'
 gem 'rouge', '~> 1.7.4', '!= 1.7.5'
 
+gem 'bourbon'
 gem 'neat'
+gem 'rubocop'
 gem 'slim'
 
 gem 'kramdown'
